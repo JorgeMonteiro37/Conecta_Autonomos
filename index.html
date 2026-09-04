@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HUB Conecta Autônomos</title>
+
+    <meta
+        name="description"
+        content="Encontre profissionais autônomos de confiança perto de você."
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="container nav">
+
+            <a href="#" class="logo">
+                <span class="logo-icon">H</span>
+                <span>HUB<span>Conecta</span></span>
+            </a>
+
+            <nav class="menu">
+                <a href="#inicio">Início</a>
+                <a href="#categorias">Categorias</a>
+                <a href="#profissionais">Profissionais</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+
+            <button class="btn btn-outline" id="openProfessional">
+                Sou profissional
+            </button>
+
+            <button class="menu-toggle" id="menuToggle">
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <main>
+
+        <section class="hero" id="inicio">
+
+            <div class="container hero-content">
+
+                <div class="hero-text">
+
+                    <span class="badge">
+                        Conectando talentos locais
+                    </span>
+
+                    <h1>
+                        Encontre o profissional
+                        <strong>certo perto de você.</strong>
+                    </h1>
+
+                    <p>
+                        O HUB conecta clientes a profissionais autônomos
+                        de confiança, de forma rápida, simples e segura.
+                    </p>
+
+                    <div class="search-box">
+
+                        <div class="search-field">
+                            <label for="serviceSearch">O que você precisa?</label>
+
+                            <input
+                                type="text"
+                                id="serviceSearch"
+                                placeholder="Ex: eletricista, manicure..."
+                            >
+                        </div>
+
+                        <div class="search-field">
+                            <label for="neighborhoodSearch">Onde?</label>
+
+                            <input
+                                type="text"
+                                id="neighborhoodSearch"
+                                placeholder="Bairro ou cidade"
+                            >
+                        </div>
+
+                        <button class="btn btn-primary" id="searchButton">
+                            Buscar
+                        </button>
+
+                    </div>
+
+                    <div class="quick-search">
+
+                        <span>Buscas populares:</span>
+
+                        <button data-search="Eletricista">
+                            Eletricista
+                        </button>
+
+                        <button data-search="Pedreiro">
+                            Pedreiro
+                        </button>
+
+                        <button data-search="Manicure">
+                            Manicure
+                        </button>
+
+                        <button data-search="Mecânico">
+                            Mecânico
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card">
+
+                    <div class="hero-card-top">
+                        <span>Profissional em destaque</span>
+                        <span class="verified">✓ Verificado</span>
+                    </div>
+
+                    <div class="professional-preview">
+
+                        <div class="avatar avatar-blue">
+                            JM
+                        </div>
+
+                        <div>
+                            <h3>João Mecânico</h3>
+                            <p>🔧 Mecânico</p>
+
+                            <div class="rating">
+                                ★★★★★
+                                <span>4.9</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="preview-info">
+                        <span>📍 Boa Viagem</span>
+                        <span>🚗 Atendimento local</span>
+                    </div>
+
+                    <button
+                        class="btn btn-dark full"
+                        data-professional="João Mecânico"
+                    >
+                        Ver perfil
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CATEGORIAS ================= -->
+
+        <section class="section" id="categorias">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-label">
+                            Encontre seu serviço
+                        </span>
+
+                        <h2>
+                            O que você precisa?
+                        </h2>
+                    </div>
+
+                    <p>
+                        Encontre profissionais de diversas áreas
+                        perto de você.
+                    </p>
+
+                </div>
+
+
+                <div class="category-grid">
+
+                    <button class="category-card" data-category="Pedreiro">
+                        <span class="category-icon">🧱</span>
+                        <strong>Pedreiro</strong>
+                        <small>Construção e reformas</small>
+                    </button>
+
+                    <button class="category-card" data-category="Pintor">
+                        <span class="category-icon">🎨</span>
+                        <strong>Pintor</strong>
+                        <small>Pintura residencial</small>
+                    </button>
+
+                    <button class="category-card" data-category="Eletricista">
+                        <span class="category-icon">⚡</span>
+                        <strong>Eletricista</strong>
+                        <small>Instalações elétricas</small>
+                    </button>
+
+                    <button class="category-card" data-category="Manicure">
+                        <span class="category-icon">💅</span>
+                        <strong>Manicure</strong>
+                        <small>Beleza e cuidados</small>
+                    </button>
+
+                    <button class="category-card" data-category="Mecânico">
+                        <span class="category-icon">🔧</span>
+                        <strong>Mecânico</strong>
+                        <small>Automóveis</small>
+                    </button>
+
+                    <button class="category-card" data-category="Encanador">
+                        <span class="category-icon">🚿</span>
+                        <strong>Encanador</strong>
+                        <small>Hidráulica</small>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= PROFISSIONAIS ================= -->
+
+        <section class="section professionals-section" id="profissionais">
+
+            <div class="container">
+
+                <div class="section-header">
+
+                    <div>
+                        <span class="section-label">
+                            Profissionais próximos
+                        </span>
+
+                        <h2>
+                            Encontre quem você precisa
+                        </h2>
+                    </div>
+
+                    <button class="clear-filter" id="clearFilter">
+                        Limpar filtros
+                    </button>
+
+                </div>
+
+
+                <div class="filter-bar">
+
+                    <select id="categoryFilter">
+
+                        <option value="Todos">
+                            Todas as categorias
+                        </option>
+
+                        <option value="Pedreiro">
+                            Pedreiro
+                        </option>
+
+                        <option value="Pintor">
+                            Pintor
+                        </option>
+
+                        <option value="Eletricista">
+                            Eletricista
+                        </option>
+
+                        <option value="Manicure">
+                            Manicure
+                        </option>
+
+                        <option value="Mecânico">
+                            Mecânico
+                        </option>
+
+                        <option value="Encanador">
+                            Encanador
+                        </option>
+
+                    </select>
+
+                    <select id="ratingFilter">
+
+                        <option value="0">
+                            Todas as avaliações
+                        </option>
+
+                        <option value="4.5">
+                            4.5+ estrelas
+                        </option>
+
+                        <option value="4.8">
+                            4.8+ estrelas
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="professional-grid" id="professionalGrid">
+
+                    <!-- Gerado pelo JavaScript -->
+
+                </div>
+
+                <div
+                    class="empty-state"
+                    id="emptyState"
+                    style="display:none;"
+                >
+                    <div>🔎</div>
+
+                    <h3>
+                        Nenhum profissional encontrado
+                    </h3>
+
+                    <p>
+                        Tente mudar os filtros ou realizar outra busca.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= COMO FUNCIONA ================= -->
+
+        <section class="how-section">
+
+            <div class="container">
+
+                <div class="section-header centered">
+
+                    <div>
+
+                        <span class="section-label">
+                            Simples e rápido
+                        </span>
+
+                        <h2>
+                            Como funciona?
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="steps">
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            01
+                        </div>
+
+                        <div class="step-icon">
+                            🔎
+                        </div>
+
+                        <h3>
+                            Encontre
+                        </h3>
+
+                        <p>
+                            Busque pelo serviço que precisa
+                            e encontre profissionais próximos.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            02
+                        </div>
+
+                        <div class="step-icon">
+                            ⭐
+                        </div>
+
+                        <h3>
+                            Compare
+                        </h3>
+
+                        <p>
+                            Veja avaliações, localização,
+                            serviços e informações do profissional.
+                        </p>
+
+                    </div>
+
+
+                    <div class="step">
+
+                        <div class="step-number">
+                            03
+                        </div>
+
+                        <div class="step-icon">
+                            🤝
+                        </div>
+
+                        <h3>
+                            Contrate
+                        </h3>
+
+                        <p>
+                            Entre em contato e combine o serviço
+                            diretamente com o profissional.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= BENEFÍCIOS ================= -->
+
+        <section class="benefits-section" id="sobre">
+
+            <div class="container benefits-content">
+
+                <div class="benefits-text">
+
+                    <span class="section-label">
+                        Por que usar o HUB?
+                    </span>
+
+                    <h2>
+                        Mais confiança.
+                        <br>
+                        Mais oportunidades.
+                    </h2>
+
+                    <p>
+                        O HUB foi criado para aproximar clientes
+                        e profissionais autônomos da comunidade local.
+                    </p>
+
+                    <div class="benefit-list">
+
+                        <div class="benefit">
+                            <span>✓</span>
+                            <div>
+                                <strong>Profissionais avaliados</strong>
+                                <p>
+                                    Veja a reputação antes de contratar.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="benefit">
+                            <span>✓</span>
+                            <div>
+                                <strong>Atendimento local</strong>
+                                <p>
+                                    Encontre profissionais perto de você.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="benefit">
+                            <span>✓</span>
+                            <div>
+                                <strong>Mais oportunidades</strong>
+                                <p>
+                                    Autônomos ganham uma vitrine digital.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="impact-card">
+
+                    <div class="impact-icon">
+                        📈
+                    </div>
+
+                    <h3>
+                        Fortalecendo a economia local
+                    </h3>
+
+                    <p>
+                        Mais trabalhos para profissionais locais
+                        significam mais renda circulando na comunidade.
+                    </p>
+
+                    <div class="impact-stat">
+                        <strong>100+</strong>
+                        <span>profissionais na meta inicial</span>
+                    </div>
+
+                    <div class="impact-stat">
+                        <strong>10%</strong>
+                        <span>comissão por serviço</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ================= CTA ================= -->
+
+        <section class="cta-section">
+
+            <div class="container cta-content">
+
+                <div>
+
+                    <span class="section-label">
+                        Você trabalha por conta própria?
+                    </span>
+
+                    <h2>
+                        Coloque seu trabalho
+                        <br>
+                        no mapa.
+                    </h2>
+
+                    <p>
+                        Crie seu perfil e seja encontrado
+                        por clientes da sua região.
+                    </p>
+
+                </div>
+
+                <button
+                    class="btn btn-light"
+                    id="openProfessionalCta"
+                >
+                    Quero ser profissional →
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="container footer-content">
+
+            <div>
+
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-icon">H</span>
+                    <span>HUB<span>Conecta</span></span>
+                </a>
+
+                <p>
+                    Conectando talentos,
+                    potencializando resultados.
+                </p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <div>
+                    <strong>HUB</strong>
+                    <a href="#sobre">Sobre nós</a>
+                    <a href="#como-funciona">Como funciona</a>
+                </div>
+
+                <div>
+                    <strong>Serviços</strong>
+                    <a href="#categorias">Categorias</a>
+                    <a href="#profissionais">Profissionais</a>
+                </div>
+
+                <div>
+                    <strong>Contato</strong>
+                    <a href="#">WhatsApp</a>
+                    <a href="#">Instagram</a>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="copyright">
+            © 2026 HUB Conecta Autônomos. Todos os direitos reservados.
+        </div>
+
+    </footer>
+
+
+    <!-- ================= MODAL PERFIL ================= -->
+
+    <div class="modal" id="profileModal">
+
+        <div class="modal-content">
+
+            <button class="modal-close" id="closeProfile">
+                ×
+            </button>
+
+            <div id="profileContent"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= MODAL PROFISSIONAL ================= -->
+
+    <div class="modal" id="professionalModal">
+
+        <div class="modal-content">
+
+            <button class="modal-close" id="closeProfessional">
+                ×
+            </button>
+
+            <div class="modal-header">
+                <span class="section-label">
+                    HUB Conecta
+                </span>
+
+                <h2>
+                    Cadastre-se como profissional
+                </h2>
+
+                <p>
+                    Faça parte da nossa rede de profissionais locais.
+                </p>
+            </div>
+
+
+            <form id="professionalForm">
+
+                <div class="form-group">
+
+                    <label for="name">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        required
+                        placeholder="Seu nome"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="profession">
+                        Profissão
+                    </label>
+
+                    <select id="profession" required>
+
+                        <option value="">
+                            Selecione
+                        </option>
+
+                        <option>Pedreiro</option>
+                        <option>Pintor</option>
+                        <option>Eletricista</option>
+                        <option>Manicure</option>
+                        <option>Mecânico</option>
+                        <option>Encanador</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="location">
+                        Bairro
+                    </label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        required
+                        placeholder="Seu bairro"
+                    >
+
+                </div>
+
+
+                <div class="form-group">
+
+                    <label for="phone">
+                        WhatsApp
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="phone"
+                        required
+                        placeholder="(00) 00000-0000"
+                    >
+
+                </div>
+
+
+                <button class="btn btn-primary full">
+                    Criar perfil
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+    <div class="toast" id="toast">
+        Operação realizada com sucesso!
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
