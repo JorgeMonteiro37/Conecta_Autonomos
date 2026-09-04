@@ -965,6 +965,44 @@ themeToggle.addEventListener(
     }
 );
 
+const neighborhoodFilter =
+    document.getElementById("neighborhoodFilter");
+
+function filterProfessionals() {
+
+    const category =
+        categoryFilter.value;
+
+    const neighborhood =
+        neighborhoodFilter.value;
+
+    const rating =
+        ratingFilter.value;
+
+    const filtered = professionals.filter(professional => {
+
+        const categoryMatch =
+            !category ||
+            professional.category === category;
+
+        const neighborhoodMatch =
+            !neighborhood ||
+            professional.neighborhood === neighborhood;
+
+        const ratingMatch =
+            !rating ||
+            professional.rating >= Number(rating);
+
+        return (
+            categoryMatch &&
+            neighborhoodMatch &&
+            ratingMatch
+        );
+    });
+
+    renderProfessionals(filtered);
+}
+
 
 /* =========================================
    INICIALIZAÇÃO
