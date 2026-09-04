@@ -689,6 +689,70 @@ menuToggle.addEventListener(
     }
 );
 
+/* =========================================
+   LIGHT / DARK MODE
+========================================= */
+
+const themeToggle =
+    document.getElementById("themeToggle");
+
+
+/*
+    Verifica se o usuário já escolheu
+    um tema anteriormente.
+*/
+
+const savedTheme =
+    localStorage.getItem("hub-theme");
+
+
+if (savedTheme === "dark") {
+
+    document.body.classList.add("dark-theme");
+
+    themeToggle.textContent = "☀️";
+
+}
+
+
+/*
+    Alternar tema
+*/
+
+themeToggle.addEventListener(
+    "click",
+    () => {
+
+        document.body.classList.toggle("dark-theme");
+
+
+        const isDark =
+            document.body.classList.contains("dark-theme");
+
+
+        if (isDark) {
+
+            themeToggle.textContent = "☀️";
+
+            localStorage.setItem(
+                "hub-theme",
+                "dark"
+            );
+
+        } else {
+
+            themeToggle.textContent = "🌙";
+
+            localStorage.setItem(
+                "hub-theme",
+                "light"
+            );
+
+        }
+
+    }
+);
+
 
 /* =========================================
    INICIALIZAÇÃO
