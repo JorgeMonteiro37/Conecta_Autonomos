@@ -1082,3 +1082,210 @@ a {
     }
 }
 
+/* =========================================
+   LIGHT / DARK MODE
+========================================= */
+
+.theme-toggle {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--dark);
+    display: grid;
+    place-items: center;
+    font-size: 18px;
+    transition: 0.25s;
+}
+
+.theme-toggle:hover {
+    transform: rotate(15deg);
+    border-color: var(--primary);
+}
+
+
+/* =========================================
+   DARK THEME
+========================================= */
+
+body.dark-theme {
+
+    --dark: #f8fafc;
+    --text: #cbd5e1;
+    --muted: #94a3b8;
+    --light: #0f172a;
+    --border: #334155;
+    --white: #111827;
+
+    background: #020617;
+    color: #cbd5e1;
+}
+
+
+/* Header */
+
+body.dark-theme .header {
+    background: rgba(2, 6, 23, 0.95);
+    border-color: #1e293b;
+}
+
+body.dark-theme .menu a {
+    color: #94a3b8;
+}
+
+body.dark-theme .menu a:hover {
+    color: #60a5fa;
+}
+
+
+/* Hero */
+
+body.dark-theme .hero {
+    background:
+        radial-gradient(
+            circle at 90% 10%,
+            #172554,
+            transparent 35%
+        ),
+        #020617;
+}
+
+body.dark-theme .hero h1,
+body.dark-theme .section-header h2,
+body.dark-theme .professional-card h3,
+body.dark-theme .category-card strong,
+body.dark-theme .step h3,
+body.dark-theme .benefits-text h2 {
+    color: #f8fafc;
+}
+
+
+/* Search */
+
+body.dark-theme .search-box,
+body.dark-theme .search-field input,
+body.dark-theme .category-card,
+body.dark-theme .professional-card,
+body.dark-theme .filter-bar select {
+    background: #111827;
+    color: #e2e8f0;
+}
+
+body.dark-theme .search-field input {
+    color: #e2e8f0;
+}
+
+body.dark-theme .search-field input::placeholder {
+    color: #64748b;
+}
+
+
+/* Hero Card */
+
+body.dark-theme .hero-card {
+    background: #111827;
+    border-color: #334155;
+}
+
+body.dark-theme .preview-info {
+    border-color: #334155;
+}
+
+
+/* Categories */
+
+body.dark-theme .category-card:hover {
+    background: #172033;
+    border-color: #3b82f6;
+}
+
+
+/* Professionals */
+
+body.dark-theme .professionals-section {
+    background: #0f172a;
+}
+
+body.dark-theme .professional-card:hover {
+    background: #172033;
+}
+
+
+/* Quick Search */
+
+body.dark-theme .quick-search button {
+    background: #111827;
+    color: #cbd5e1;
+    border-color: #334155;
+}
+
+
+/* How it works */
+
+body.dark-theme .how-section {
+    background: #020617;
+}
+
+body.dark-theme .step-icon {
+    background: #172554;
+}
+
+
+/* Benefits */
+
+body.dark-theme .benefits-section {
+    background: #0f172a;
+}
+
+
+/* Modal */
+
+body.dark-theme .modal-content {
+    background: #111827;
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group select {
+    background: #020617;
+    color: #e2e8f0;
+    border-color: #334155;
+}
+
+body.dark-theme .form-group input::placeholder {
+    color: #64748b;
+}
+
+
+/* Category / filter buttons */
+
+body.dark-theme .card-buttons button {
+    background: #111827;
+    color: #cbd5e1;
+    border-color: #334155;
+}
+
+body.dark-theme .clear-filter {
+    color: #60a5fa;
+}
+
+
+/* Theme button */
+
+body.dark-theme .theme-toggle {
+    background: #111827;
+    color: #f8fafc;
+    border-color: #334155;
+}
+
+
+/* Mobile menu */
+
+@media (max-width: 750px) {
+
+    body.dark-theme .menu {
+        background: #020617 !important;
+        border-color: #1e293b !important;
+    }
+
+}
