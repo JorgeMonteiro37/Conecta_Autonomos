@@ -1080,7 +1080,8 @@ a {
         display: block;
         margin: 5px 0;
     }
-   /* =========================================
+
+/* =========================================
    LIGHT / DARK MODE
 ========================================= */
 
@@ -1285,6 +1286,6 @@ body.dark-theme .theme-toggle {
         background: #020617 !important;
         border-color: #1e293b !important;
     }
-
   }
+}
 
