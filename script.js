@@ -9,83 +9,295 @@
 ========================================= */
 
 const professionals = [
-
+   
     {
         id: 1,
-        name: "João Silva",
-        profession: "Eletricista",
-        category: "Eletricista",
-        location: "Boa Viagem",
+        name: "João da Silva",
+        category: "Pedreiro",
+        neighborhood: "Bom Jesus",
+        city: "Serra Talhada - PE",
         rating: 4.9,
-        reviews: 87,
-        initials: "JS",
-        description:
-            "Instalações elétricas residenciais, manutenção e reparos."
+        reviews: 47,
+        price: "A partir de R$ 120",
+        description: "Especialista em reformas, construção de paredes, pisos e acabamentos.",
+        phone: "(87) 9 0000-0001"
     },
-
     {
         id: 2,
-        name: "Carlos Santos",
-        profession: "Pedreiro",
-        category: "Pedreiro",
-        location: "Casa Amarela",
+        name: "Carlos Henrique",
+        category: "Eletricista",
+        neighborhood: "São Cristóvão",
+        city: "Serra Talhada - PE",
         rating: 4.8,
-        reviews: 64,
-        initials: "CS",
-        description:
-            "Construção, reformas, acabamento e pequenos reparos."
+        reviews: 35,
+        price: "A partir de R$ 80",
+        description: "Instalações elétricas residenciais, manutenção e pequenos reparos.",
+        phone: "(87) 9 0000-0002"
     },
-
     {
         id: 3,
-        name: "Mariana Oliveira",
-        profession: "Manicure",
+        name: "Maria Oliveira",
         category: "Manicure",
-        location: "Imbiribeira",
-        rating: 4.9,
-        reviews: 112,
-        initials: "MO",
-        description:
-            "Manicure, pedicure, esmaltação e cuidados com as unhas."
+        neighborhood: "Nossa Senhora da Penha",
+        city: "Serra Talhada - PE",
+        rating: 5.0,
+        reviews: 62,
+        price: "A partir de R$ 35",
+        description: "Manicure, pedicure, esmaltação e cuidados especiais com as unhas.",
+        phone: "(87) 9 0000-0003"
     },
-
     {
         id: 4,
-        name: "Roberto Lima",
-        profession: "Mecânico",
-        category: "Mecânico",
-        location: "Ipsep",
+        name: "Pedro Alves",
+        category: "Pintor",
+        neighborhood: "AABB",
+        city: "Serra Talhada - PE",
         rating: 4.7,
-        reviews: 52,
-        initials: "RL",
-        description:
-            "Manutenção preventiva e corretiva de automóveis."
+        reviews: 29,
+        price: "A partir de R$ 150",
+        description: "Pintura residencial e comercial, preparação de paredes e acabamento.",
+        phone: "(87) 9 0000-0004"
     },
-
     {
         id: 5,
-        name: "André Ferreira",
-        profession: "Pintor",
-        category: "Pintor",
-        location: "Várzea",
-        rating: 4.8,
-        reviews: 43,
-        initials: "AF",
-        description:
-            "Pintura residencial, comercial e acabamento."
+        name: "Rafael Santos",
+        category: "Mecânico",
+        neighborhood: "Várzea",
+        city: "Serra Talhada - PE",
+        rating: 4.9,
+        reviews: 51,
+        price: "A partir de R$ 100",
+        description: "Manutenção automotiva, troca de óleo, freios e revisão geral.",
+        phone: "(87) 9 0000-0005"
     },
-
     {
         id: 6,
-        name: "Pedro Costa",
-        profession: "Encanador",
+        name: "José Roberto",
         category: "Encanador",
-        location: "Madalena",
+        neighborhood: "Centro",
+        city: "Serra Talhada - PE",
+        rating: 4.8,
+        reviews: 38,
+        price: "A partir de R$ 70",
+        description: "Consertos hidráulicos, vazamentos, torneiras, caixas d'água e tubulações.",
+        phone: "(87) 9 0000-0006"
+    },
+    {
+        id: 7,
+        name: "Lucas Ferreira",
+        category: "Eletricista",
+        neighborhood: "Tancredo Neves",
+        city: "Serra Talhada - PE",
         rating: 4.6,
+        reviews: 24,
+        price: "A partir de R$ 75",
+        description: "Manutenção elétrica, instalação de tomadas, luminárias e chuveiros.",
+        phone: "(87) 9 0000-0007"
+    },
+    {
+        id: 8,
+        name: "Ana Paula",
+        category: "Manicure",
+        neighborhood: "Vila Bela",
+        city: "Serra Talhada - PE",
+        rating: 4.9,
+        reviews: 43,
+        price: "A partir de R$ 40",
+        description: "Alongamento, esmaltação, pedicure e cuidados para eventos.",
+        phone: "(87) 9 0000-0008"
+    },
+    {
+        id: 9,
+        name: "Marcos Antônio",
+        category: "Pedreiro",
+        neighborhood: "Nossa Senhora da Conceição",
+        city: "Serra Talhada - PE",
+        rating: 4.8,
+        reviews: 32,
+        price: "A partir de R$ 130",
+        description: "Construção e reforma de casas, calçadas, muros e áreas externas.",
+        phone: "(87) 9 0000-0009"
+    },
+    {
+        id: 10,
+        name: "Francisco Lima",
+        category: "Pintor",
+        neighborhood: "São Sebastião",
+        city: "Serra Talhada - PE",
+        rating: 4.7,
+        reviews: 27,
+        price: "A partir de R$ 140",
+        description: "Pintura interna e externa, texturas e renovação de ambientes.",
+        phone: "(87) 9 0000-0010"
+    },
+    {
+        id: 11,
+        name: "André Luiz",
+        category: "Mecânico",
+        neighborhood: "Cagep",
+        city: "Serra Talhada - PE",
+        rating: 4.9,
+        reviews: 44,
+        price: "A partir de R$ 90",
+        description: "Diagnóstico, manutenção preventiva e reparos automotivos.",
+        phone: "(87) 9 0000-0011"
+    },
+    {
+        id: 12,
+        name: "Antônio José",
+        category: "Encanador",
+        neighborhood: "José Rufino Alves",
+        city: "Serra Talhada - PE",
+        rating: 4.6,
+        reviews: 21,
+        price: "A partir de R$ 65",
+        description: "Serviços hidráulicos residenciais e comerciais.",
+        phone: "(87) 9 0000-0012"
+    },
+    {
+        id: 13,
+        name: "Bruno Henrique",
+        category: "Pedreiro",
+        neighborhood: "José Alves de Carvalho Nunes",
+        city: "Serra Talhada - PE",
+        rating: 4.8,
+        reviews: 36,
+        price: "A partir de R$ 110",
+        description: "Reformas, assentamento de pisos, revestimentos e alvenaria.",
+        phone: "(87) 9 0000-0013"
+    },
+    {
+        id: 14,
+        name: "Diego Martins",
+        category: "Eletricista",
+        neighborhood: "Nossa Senhora de Fátima",
+        city: "Serra Talhada - PE",
+        rating: 4.7,
         reviews: 31,
-        initials: "PC",
-        description:
-            "Manutenção hidráulica, vazamentos e instalações."
+        price: "A partir de R$ 80",
+        description: "Instalações elétricas, manutenção e iluminação residencial.",
+        phone: "(87) 9 0000-0014"
+    },
+    {
+        id: 15,
+        name: "Juliana Souza",
+        category: "Manicure",
+        neighborhood: "Cachoeira",
+        city: "Serra Talhada - PE",
+        rating: 4.9,
+        reviews: 39,
+        price: "A partir de R$ 35",
+        description: "Manicure e pedicure com atendimento residencial.",
+        phone: "(87) 9 0000-0015"
+    },
+    {
+        id: 16,
+        name: "Roberto Gomes",
+        category: "Pintor",
+        neighborhood: "Bomba",
+        city: "Serra Talhada - PE",
+        rating: 4.6,
+        reviews: 18,
+        price: "A partir de R$ 130",
+        description: "Pintura residencial, comercial e pequenos reparos.",
+        phone: "(87) 9 0000-0016"
+    },
+    {
+        id: 17,
+        name: "Edivaldo Santos",
+        category: "Mecânico",
+        neighborhood: "Bom Jesus",
+        city: "Serra Talhada - PE",
+        rating: 4.8,
+        reviews: 33,
+        price: "A partir de R$ 100",
+        description: "Mecânica geral, revisão e manutenção de veículos.",
+        phone: "(87) 9 0000-0017"
+    },
+    {
+        id: 18,
+        name: "Gustavo Pereira",
+        category: "Encanador",
+        neighborhood: "Vila Bela",
+        city: "Serra Talhada - PE",
+        rating: 4.7,
+        reviews: 25,
+        price: "A partir de R$ 70",
+        description: "Manutenção hidráulica e instalação de equipamentos.",
+        phone: "(87) 9 0000-0018"
+    },
+    {
+        id: 19,
+        name: "Wellington Alves",
+        category: "Pedreiro",
+        neighborhood: "São Cristóvão",
+        city: "Serra Talhada - PE",
+        rating: 5.0,
+        reviews: 41,
+        price: "A partir de R$ 125",
+        description: "Construção, reformas e acabamento de imóveis.",
+        phone: "(87) 9 0000-0019"
+    },
+    {
+        id: 20,
+        name: "Camila Rodrigues",
+        category: "Manicure",
+        neighborhood: "Tancredo Neves",
+        city: "Serra Talhada - PE",
+        rating: 4.8,
+        reviews: 34,
+        price: "A partir de R$ 40",
+        description: "Manicure, pedicure, nail art e atendimento personalizado.",
+        phone: "(87) 9 0000-0020"
+    },
+    {
+        id: 21,
+        name: "Márcio Silva",
+        category: "Eletricista",
+        neighborhood: "José Tomé de Souza Ramos",
+        city: "Serra Talhada - PE",
+        rating: 4.9,
+        reviews: 46,
+        price: "A partir de R$ 85",
+        description: "Eletricista residencial, instalação e manutenção.",
+        phone: "(87) 9 0000-0021"
+    },
+    {
+        id: 22,
+        name: "Renato Carvalho",
+        category: "Pintor",
+        neighborhood: "Nossa Senhora da Penha",
+        city: "Serra Talhada - PE",
+        rating: 4.8,
+        reviews: 37,
+        price: "A partir de R$ 145",
+        description: "Pintura, textura, massa corrida e acabamento.",
+        phone: "(87) 9 0000-0022"
+    },
+    {
+        id: 23,
+        name: "Samuel Oliveira",
+        category: "Mecânico",
+        neighborhood: "São Sebastião",
+        city: "Serra Talhada - PE",
+        rating: 4.7,
+        reviews: 28,
+        price: "A partir de R$ 95",
+        description: "Manutenção automotiva e diagnóstico de problemas.",
+        phone: "(87) 9 0000-0023"
+    },
+   
+    {
+        id: 24,
+        name: "Paulo César",
+        category: "Encanador",
+        neighborhood: "AABB",
+        city: "Serra Talhada - PE",
+        rating: 4.9,
+        reviews: 40,
+        price: "A partir de R$ 75",
+        description: "Serviços hidráulicos, vazamentos e instalações.",
+        phone: "(87) 9 0000-0024"
     }
 
 ];
